@@ -297,8 +297,10 @@ func (f *Frontend) processRequest(request unsafe.Pointer) {
 		file, match, err = common.TranslateUriToFile(goURI, "wails", "null")
 		if err != nil {
 			// TODO Handle errors
+			f.logger.Error(err.Error())
 			return
 		} else if !match {
+			f.logger.Error("Failed to locate: %v", goURI)
 			// This should never happen on linux, because we get only called for wails://
 			panic("Unexpected host for request on wails:// scheme")
 		}

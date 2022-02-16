@@ -284,6 +284,7 @@ func (f *Frontend) processRequest(r *request) {
 	file, match, err := common.TranslateUriToFile(uri, "wails", "wails")
 	if err == nil {
 		if !match {
+			f.logger.Error("Failed to locate: %v", uri)
 			// This should never happen on darwin, because we get only called for wails://
 			panic("Unexpected host for request on wails:// scheme")
 		}
