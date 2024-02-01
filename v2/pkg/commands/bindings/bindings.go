@@ -7,10 +7,10 @@ import (
 	"path/filepath"
 	"runtime"
 
+	"github.com/AlpineAIO/wails/v2/internal/colour"
+	"github.com/AlpineAIO/wails/v2/internal/shell"
+	"github.com/AlpineAIO/wails/v2/pkg/commands/buildtags"
 	"github.com/samber/lo"
-	"github.com/wailsapp/wails/v2/internal/colour"
-	"github.com/wailsapp/wails/v2/internal/shell"
-	"github.com/wailsapp/wails/v2/pkg/commands/buildtags"
 )
 
 // Options for generating bindings

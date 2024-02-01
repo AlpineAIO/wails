@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/AlpineAIO/wails/v2/pkg/templates"
 	"github.com/matryer/is"
-	"github.com/wailsapp/wails/v2/pkg/templates"
 )
 
 const standardBindings = `// @ts-check

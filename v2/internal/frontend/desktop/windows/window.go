@@ -3,18 +3,19 @@
 package windows
 
 import (
-	"github.com/wailsapp/go-webview2/pkg/edge"
 	"sync"
 	"unsafe"
 
-	"github.com/wailsapp/wails/v2/internal/frontend/desktop/windows/win32"
-	"github.com/wailsapp/wails/v2/internal/system/operatingsystem"
+	"github.com/wailsapp/go-webview2/pkg/edge"
 
-	"github.com/wailsapp/wails/v2/internal/frontend/desktop/windows/winc"
-	"github.com/wailsapp/wails/v2/internal/frontend/desktop/windows/winc/w32"
-	"github.com/wailsapp/wails/v2/pkg/menu"
-	"github.com/wailsapp/wails/v2/pkg/options"
-	winoptions "github.com/wailsapp/wails/v2/pkg/options/windows"
+	"github.com/AlpineAIO/wails/v2/internal/frontend/desktop/windows/win32"
+	"github.com/AlpineAIO/wails/v2/internal/system/operatingsystem"
+
+	"github.com/AlpineAIO/wails/v2/internal/frontend/desktop/windows/winc"
+	"github.com/AlpineAIO/wails/v2/internal/frontend/desktop/windows/winc/w32"
+	"github.com/AlpineAIO/wails/v2/pkg/menu"
+	"github.com/AlpineAIO/wails/v2/pkg/options"
+	winoptions "github.com/AlpineAIO/wails/v2/pkg/options/windows"
 )
 
 type Window struct {

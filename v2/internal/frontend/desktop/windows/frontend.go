@@ -17,20 +17,20 @@ import (
 	"text/template"
 	"time"
 
+	"github.com/AlpineAIO/wails/v2/internal/binding"
+	"github.com/AlpineAIO/wails/v2/internal/frontend"
+	"github.com/AlpineAIO/wails/v2/internal/frontend/desktop/windows/win32"
+	"github.com/AlpineAIO/wails/v2/internal/frontend/desktop/windows/winc"
+	"github.com/AlpineAIO/wails/v2/internal/frontend/desktop/windows/winc/w32"
+	wailsruntime "github.com/AlpineAIO/wails/v2/internal/frontend/runtime"
+	"github.com/AlpineAIO/wails/v2/internal/logger"
+	"github.com/AlpineAIO/wails/v2/internal/system/operatingsystem"
+	"github.com/AlpineAIO/wails/v2/pkg/assetserver"
+	"github.com/AlpineAIO/wails/v2/pkg/assetserver/webview"
+	"github.com/AlpineAIO/wails/v2/pkg/options"
+	"github.com/AlpineAIO/wails/v2/pkg/options/windows"
 	"github.com/bep/debounce"
 	"github.com/wailsapp/go-webview2/pkg/edge"
-	"github.com/wailsapp/wails/v2/internal/binding"
-	"github.com/wailsapp/wails/v2/internal/frontend"
-	"github.com/wailsapp/wails/v2/internal/frontend/desktop/windows/win32"
-	"github.com/wailsapp/wails/v2/internal/frontend/desktop/windows/winc"
-	"github.com/wailsapp/wails/v2/internal/frontend/desktop/windows/winc/w32"
-	wailsruntime "github.com/wailsapp/wails/v2/internal/frontend/runtime"
-	"github.com/wailsapp/wails/v2/internal/logger"
-	"github.com/wailsapp/wails/v2/internal/system/operatingsystem"
-	"github.com/wailsapp/wails/v2/pkg/assetserver"
-	"github.com/wailsapp/wails/v2/pkg/assetserver/webview"
-	"github.com/wailsapp/wails/v2/pkg/options"
-	"github.com/wailsapp/wails/v2/pkg/options/windows"
 )
 
 const startURL = "http://wails.localhost/"
@@ -166,7 +166,7 @@ func (f *Frontend) Run(ctx context.Context) error {
 			// If the window is frameless and we are minimizing, then we need to suppress the Resize on the
 			// WebView2. If we don't do this, restoring does not work as expected and first restores with some wrong
 			// size during the restore animation and only fully renders when the animation is done. This highly
-			// depends on the content in the WebView, see https://github.com/wailsapp/wails/issues/1319
+			// depends on the content in the WebView, see https://github.com/AlpineAIO/wails/issues/1319
 			event, _ := arg.Data.(*winc.SizeEventData)
 			if event != nil && event.Type == w32.SIZE_MINIMIZED {
 				return

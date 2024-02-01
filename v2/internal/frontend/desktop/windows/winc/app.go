@@ -8,9 +8,10 @@ package winc
 
 import (
 	"runtime"
+	"time"
 	"unsafe"
 
-	"github.com/wailsapp/wails/v2/internal/frontend/desktop/windows/winc/w32"
+	"github.com/AlpineAIO/wails/v2/internal/frontend/desktop/windows/winc/w32"
 )
 
 var (
@@ -83,6 +84,8 @@ func RunMainLoop() int {
 			w32.TranslateMessage(m)
 			w32.DispatchMessage(m)
 		}
+
+		time.Sleep(5 * time.Millisecond)
 	}
 
 	w32.GdiplusShutdown()

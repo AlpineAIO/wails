@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/wailsapp/wails/v2/internal/shell"
+	"github.com/AlpineAIO/wails/v2/internal/shell"
 	"runtime"
 	"runtime/debug"
 	"strconv"
@@ -10,11 +10,11 @@ import (
 
 	"github.com/pterm/pterm"
 
+	"github.com/AlpineAIO/wails/v2/cmd/wails/flags"
+	"github.com/AlpineAIO/wails/v2/internal/colour"
+	"github.com/AlpineAIO/wails/v2/internal/system"
+	"github.com/AlpineAIO/wails/v2/internal/system/packagemanager"
 	"github.com/jaypipes/ghw"
-	"github.com/wailsapp/wails/v2/cmd/wails/flags"
-	"github.com/wailsapp/wails/v2/internal/colour"
-	"github.com/wailsapp/wails/v2/internal/system"
-	"github.com/wailsapp/wails/v2/internal/system/packagemanager"
 )
 
 func diagnoseEnvironment(f *flags.Doctor) error {

@@ -22,10 +22,10 @@ import (
 	"sync"
 	"unsafe"
 
-	"github.com/wailsapp/wails/v2/internal/frontend"
-	"github.com/wailsapp/wails/v2/pkg/menu"
-	"github.com/wailsapp/wails/v2/pkg/options"
-	"github.com/wailsapp/wails/v2/pkg/options/linux"
+	"github.com/AlpineAIO/wails/v2/internal/frontend"
+	"github.com/AlpineAIO/wails/v2/pkg/menu"
+	"github.com/AlpineAIO/wails/v2/pkg/options"
+	"github.com/AlpineAIO/wails/v2/pkg/options/linux"
 )
 
 func gtkBool(input bool) C.gboolean {
@@ -92,7 +92,7 @@ func NewWindow(appoptions *options.App, debug bool, devtoolsEnabled bool) *Windo
 	if appoptions.Linux != nil {
 		webviewGpuPolicy = int(appoptions.Linux.WebviewGpuPolicy)
 	} else {
-		// workaround for https://github.com/wailsapp/wails/issues/2977
+		// workaround for https://github.com/AlpineAIO/wails/issues/2977
 		webviewGpuPolicy = int(linux.WebviewGpuPolicyNever)
 	}
 

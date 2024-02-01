@@ -7,7 +7,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/wailsapp/wails/v2/internal/system/operatingsystem"
+	"github.com/AlpineAIO/wails/v2/internal/system/operatingsystem"
 	"golang.org/x/sys/windows"
 )
 
