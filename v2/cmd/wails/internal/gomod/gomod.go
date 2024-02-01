@@ -3,9 +3,7 @@ package gomod
 import (
 	"fmt"
 	"os"
-	"strings"
 
-	"github.com/AlpineAIO/wails/v2/cmd/wails/internal"
 	"github.com/AlpineAIO/wails/v2/internal/colour"
 	"github.com/AlpineAIO/wails/v2/internal/fs"
 	"github.com/AlpineAIO/wails/v2/internal/gomod"
@@ -32,27 +30,6 @@ func SyncGoMod(logger *clilogger.CLILogger, updateWailsVersion bool) error {
 		return err
 	} else if updated {
 		LogGreen("Updated go.mod to use Go '%s'", goversion.MinRequirement)
-	}
-
-	internalVersion := strings.TrimSpace(internal.Version)
-	if outOfSync, err := gomod.GoModOutOfSync(gomodData, internalVersion); err != nil {
-		return err
-	} else if outOfSync {
-		if updateWailsVersion {
-			LogGreen("Updating go.mod to use Wails '%s'", internalVersion)
-			gomodData, err = gomod.UpdateGoModVersion(gomodData, internalVersion)
-			if err != nil {
-				return err
-			}
-			updated = true
-		} else {
-			gomodversion, err := gomod.GetWailsVersionFromModFile(gomodData)
-			if err != nil {
-				return err
-			}
-
-			logger.Println("Warning: go.mod is using Wails '%s' but the CLI is '%s'. Consider updating your project's `go.mod` file.\n", gomodversion.String(), internal.Version)
-		}
 	}
 
 	if updated {
