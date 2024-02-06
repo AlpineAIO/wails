@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"net/url"
 	"strings"
 
 	"github.com/AlpineAIO/wails/v3/pkg/application"
@@ -202,6 +203,10 @@ func (w Window) SetURL(s string) application.Window {
 }
 
 func (w Window) SetHTTPClient(c *http.Client) application.Window {
+	return w
+}
+
+func (w Window) SetClientFilter(filter func(u *url.URL) bool) application.Window {
 	return w
 }
 

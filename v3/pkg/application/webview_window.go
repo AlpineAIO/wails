@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
+	"net/url"
 	"runtime"
 	"strings"
 	"sync"
@@ -28,6 +29,7 @@ type (
 		setAlwaysOnTop(alwaysOnTop bool)
 		setURL(url string)
 		setHTTPClient(c *http.Client)
+		setClientFilter(filter func(u *url.URL) bool)
 		setResizable(resizable bool)
 		setMinSize(width, height int)
 		setMaxSize(width, height int)
@@ -404,6 +406,15 @@ func (w *WebviewWindow) SetHTTPClient(c *http.Client) Window {
 	if w.impl != nil {
 		InvokeSync(func() {
 			w.impl.setHTTPClient(c)
+		})
+	}
+	return w
+}
+
+func (w *WebviewWindow) SetClientFilter(filter func(u *url.URL) bool) Window {
+	if w.impl != nil {
+		InvokeSync(func() {
+			w.impl.setClientFilter(filter)
 		})
 	}
 	return w

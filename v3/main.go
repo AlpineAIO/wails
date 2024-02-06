@@ -3,6 +3,9 @@ package main
 import (
 	"log"
 	"math/rand"
+	"net/http"
+	"net/http/cookiejar"
+	"net/url"
 	"strconv"
 	"time"
 
@@ -32,12 +35,19 @@ func main() {
 	})
 
 	go func() {
+		u, _ := url.Parse("http://localhost:8888")
+		jar, _ := cookiejar.New(nil)
+		client := &http.Client{Transport: &http.Transport{Proxy: http.ProxyURL(u)}, Jar: jar}
+
 		time.Sleep(2 * time.Second)
-		app.NewWebviewWindow().
+		window := app.NewWebviewWindow().
 			SetTitle("WebviewWindow "+strconv.Itoa(rand.Intn(1000))).
-			SetRelativePosition(rand.Intn(1000), rand.Intn(800)).
-			SetURL("https://wails.io").
+			SetRelativePosition(rand.Intn(1000), rand.Intn(800)).SetHTTPClient(client).
+			SetURL("https://www.shopwss.com/").
 			Show()
+
+		_ = window
+
 	}()
 	err := app.Run()
 

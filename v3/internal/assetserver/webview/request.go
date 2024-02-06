@@ -11,6 +11,7 @@ type Request interface {
 	Header() (http.Header, error)
 	Body() (io.ReadCloser, error)
 
+	HTTPRequest() (*http.Request, error)
 	Response() ResponseWriter
 
 	Close() error

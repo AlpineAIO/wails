@@ -92,6 +92,40 @@ func (r *request) Body() (io.ReadCloser, error) {
 	return r.body, r.bodyErr
 }
 
+func (r *request) HTTPRequest() (*http.Request, error) {
+	url, err := r.URL()
+	if err != nil {
+		return nil, fmt.Errorf("HTTP-URL: %w", err)
+	}
+
+	method, err := r.Method()
+	if err != nil {
+		return nil, fmt.Errorf("HTTP-Method: %w", err)
+	}
+
+	header, err := r.Header()
+	if err != nil {
+		return nil, fmt.Errorf("HTTP-Header: %w", err)
+	}
+
+	body, err := r.Body()
+	if err != nil {
+		return nil, fmt.Errorf("HTTP-Body: %w", err)
+	}
+
+	if body == nil {
+		body = http.NoBody
+	}
+
+	req, err := http.NewRequest(method, url, body)
+	if err != nil {
+		return nil, fmt.Errorf("HTTP-Request: %w", err)
+	}
+
+	req.Header = header
+	return req, nil
+}
+
 func (r *request) Response() ResponseWriter {
 	if r.rw != nil {
 		return r.rw

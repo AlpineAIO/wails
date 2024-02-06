@@ -5,6 +5,7 @@ package application
 import (
 	"fmt"
 	"net/http"
+	"net/url"
 
 	"github.com/AlpineAIO/wails/v3/internal/assetserver"
 	"github.com/AlpineAIO/wails/v3/internal/capabilities"
@@ -254,6 +255,10 @@ func (w *linuxWebviewWindow) setURL(uri string) {
 }
 
 func (w *linuxWebviewWindow) setHTTPClient(c *http.Client) {
+	// Not supported on linux
+}
+
+func (w *linuxWebviewWindow) setClientFilter(filter func(u *url.URL) bool) {
 	// Not supported on linux
 }
 

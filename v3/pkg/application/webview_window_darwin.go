@@ -728,6 +728,7 @@ void windowFocus(void *window) {
 import "C"
 import (
 	"net/http"
+	"net/url"
 	"sync"
 	"unsafe"
 
@@ -969,6 +970,10 @@ func (w *macosWebviewWindow) setURL(uri string) {
 }
 
 func (w *macosWebviewWindow) setHTTPClient(c *http.Client) {
+	// Not supported on macOS
+}
+
+func (w *macosWebviewWindow) setClientFilter(filter func(u *url.URL) bool) {
 	// Not supported on macOS
 }
 

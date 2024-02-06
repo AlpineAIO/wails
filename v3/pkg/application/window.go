@@ -2,6 +2,7 @@ package application
 
 import (
 	"net/http"
+	"net/url"
 
 	"github.com/AlpineAIO/wails/v3/pkg/events"
 )
@@ -65,6 +66,7 @@ type Window interface {
 	SetTitle(title string) Window
 	SetURL(s string) Window
 	SetHTTPClient(c *http.Client) Window
+	SetClientFilter(filter func(u *url.URL) bool) Window
 	SetZoom(magnification float64) Window
 	Show() Window
 	Size() (width int, height int)

@@ -5,6 +5,7 @@ package application
 import (
 	"errors"
 	"fmt"
+	"io"
 	"net/http"
 	"net/url"
 	"strconv"
@@ -56,6 +57,7 @@ type windowsWebviewWindow struct {
 
 	// Webview
 	client          *http.Client
+	clientFilter    func(u *url.URL) bool
 	chromium        *edge.Chromium
 	hasStarted      bool
 	resizeDebouncer func(func())
@@ -142,6 +144,10 @@ func (w *windowsWebviewWindow) setURL(url string) {
 
 func (w *windowsWebviewWindow) setHTTPClient(c *http.Client) {
 	w.client = c
+}
+
+func (w *windowsWebviewWindow) setClientFilter(filter func(u *url.URL) bool) {
+	w.clientFilter = filter
 }
 
 func (w *windowsWebviewWindow) setResizable(resizable bool) {
@@ -1254,16 +1260,17 @@ func (w *windowsWebviewWindow) processRequest(req *edge.ICoreWebView2WebResource
 
 	//Get the request
 	uri, _ := req.GetUri()
+
 	reqUri, err := url.ParseRequestURI(uri)
 	if err != nil {
 		globalApplication.error("Unable to parse request uri", "uri", uri, "error", err)
 		return
 	}
 
-	if reqUri.Scheme != "http" {
+	if reqUri.Scheme != "http" && w.client == nil {
 		// Let the WebView2 handle the request with its default handler
 		return
-	} else if !strings.HasPrefix(reqUri.Host, "wails.localhost") {
+	} else if !strings.HasPrefix(reqUri.Host, "wails.localhost") && w.client == nil {
 		// Let the WebView2 handle the request with its default handler
 		return
 	}
@@ -1279,10 +1286,85 @@ func (w *windowsWebviewWindow) processRequest(req *edge.ICoreWebView2WebResource
 		return
 	}
 
+	if w.client != nil {
+		go w.processClientRequest(webviewRequest)
+		return
+	}
+
 	webviewRequests <- &webViewAssetRequest{
 		Request:    webviewRequest,
 		windowId:   w.parent.id,
 		windowName: globalApplication.getWindowForID(w.parent.id).Name(),
+	}
+}
+
+func (w *windowsWebviewWindow) processClientRequest(r webview.Request) {
+	var err error
+
+	if w.clientFilter != nil {
+		uri, err := r.URL()
+		if err != nil {
+			globalApplication.error("URL failed: %s", err)
+			return
+		}
+
+		u, err := url.Parse(uri)
+		if err != nil {
+			globalApplication.error("Parse failed: %s", err)
+			return
+		}
+
+		if w.clientFilter(u) {
+			return
+		}
+	}
+
+	wrw := r.Response()
+	defer func() {
+		if err := wrw.Finish(); err != nil {
+			globalApplication.error("Finish failed: %s", err)
+		}
+	}()
+
+	var rw http.ResponseWriter = &assetserver.ContentTypeSniffer{Rw: wrw} // Make sure we have a Content-Type sniffer
+	defer rw.WriteHeader(http.StatusNotImplemented)
+
+	req, err := r.HTTPRequest()
+	if err != nil {
+		globalApplication.error("HTTPRequest failed: %s", err)
+		return
+	}
+	defer req.Body.Close()
+
+	req.Header.Del("Cookie")
+
+	if req.ContentLength == 0 {
+		req.ContentLength, _ = strconv.ParseInt(req.Header.Get(assetserver.HeaderContentLength), 10, 64)
+	} else {
+		req.Header.Set(assetserver.HeaderContentLength, fmt.Sprintf("%d", req.ContentLength))
+	}
+
+	if host := req.Header.Get(assetserver.HeaderHost); host != "" {
+		req.Host = host
+	}
+
+	resp, err := w.client.Do(req)
+	if err != nil {
+		globalApplication.error("Do failed: %s", err)
+		return
+	}
+
+	copyHeader(wrw.Header(), resp.Header)
+	wrw.WriteHeader(resp.StatusCode)
+	io.Copy(wrw, resp.Body)
+	resp.Body.Close()
+}
+
+func copyHeader(dst, src http.Header) {
+	for k, vv := range src {
+		for _, v := range vv {
+			dst.Add(k, v)
+		}
 	}
 }
 
