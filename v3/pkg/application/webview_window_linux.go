@@ -4,6 +4,8 @@ package application
 
 import (
 	"fmt"
+	"net/http"
+
 	"github.com/AlpineAIO/wails/v3/internal/assetserver"
 	"github.com/AlpineAIO/wails/v3/internal/capabilities"
 	"github.com/AlpineAIO/wails/v3/pkg/events"
@@ -249,6 +251,10 @@ func (w *linuxWebviewWindow) execJS(js string) {
 
 func (w *linuxWebviewWindow) setURL(uri string) {
 	windowSetURL(w.webview, uri)
+}
+
+func (w *linuxWebviewWindow) setHTTPClient(c *http.Client) {
+	// Not supported on linux
 }
 
 func (w *linuxWebviewWindow) setAlwaysOnTop(alwaysOnTop bool) {

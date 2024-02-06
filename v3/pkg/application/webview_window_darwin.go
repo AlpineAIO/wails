@@ -727,10 +727,12 @@ void windowFocus(void *window) {
 */
 import "C"
 import (
-	"github.com/AlpineAIO/wails/v3/internal/assetserver"
-	"github.com/AlpineAIO/wails/v3/internal/runtime"
+	"net/http"
 	"sync"
 	"unsafe"
+
+	"github.com/AlpineAIO/wails/v3/internal/assetserver"
+	"github.com/AlpineAIO/wails/v3/internal/runtime"
 
 	"github.com/AlpineAIO/wails/v3/pkg/events"
 )
@@ -964,6 +966,10 @@ func (w *macosWebviewWindow) execJS(js string) {
 
 func (w *macosWebviewWindow) setURL(uri string) {
 	C.navigationLoadURL(w.nsWindow, C.CString(uri))
+}
+
+func (w *macosWebviewWindow) setHTTPClient(c *http.Client) {
+	// Not supported on macOS
 }
 
 func (w *macosWebviewWindow) setAlwaysOnTop(alwaysOnTop bool) {

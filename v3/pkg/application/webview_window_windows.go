@@ -5,8 +5,7 @@ package application
 import (
 	"errors"
 	"fmt"
-	"github.com/AlpineAIO/wails/v3/internal/assetserver"
-	"github.com/AlpineAIO/wails/v3/internal/runtime"
+	"net/http"
 	"net/url"
 	"strconv"
 	"strings"
@@ -15,6 +14,9 @@ import (
 	"time"
 	"unicode/utf16"
 	"unsafe"
+
+	"github.com/AlpineAIO/wails/v3/internal/assetserver"
+	"github.com/AlpineAIO/wails/v3/internal/runtime"
 
 	"github.com/AlpineAIO/wails/v3/internal/assetserver/webview"
 	"github.com/AlpineAIO/wails/v3/internal/capabilities"
@@ -53,6 +55,7 @@ type windowsWebviewWindow struct {
 	previousWindowPlacement w32.WINDOWPLACEMENT
 
 	// Webview
+	client          *http.Client
 	chromium        *edge.Chromium
 	hasStarted      bool
 	resizeDebouncer func(func())
@@ -135,6 +138,10 @@ func (w *windowsWebviewWindow) setAlwaysOnTop(alwaysOnTop bool) {
 func (w *windowsWebviewWindow) setURL(url string) {
 	// Navigate to the given URL in the webview
 	w.chromium.Navigate(url)
+}
+
+func (w *windowsWebviewWindow) setHTTPClient(c *http.Client) {
+	w.client = c
 }
 
 func (w *windowsWebviewWindow) setResizable(resizable bool) {

@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"net/http"
 	"runtime"
 	"strings"
 	"sync"
@@ -26,6 +27,7 @@ type (
 		setSize(width, height int)
 		setAlwaysOnTop(alwaysOnTop bool)
 		setURL(url string)
+		setHTTPClient(c *http.Client)
 		setResizable(resizable bool)
 		setMinSize(width, height int)
 		setMaxSize(width, height int)
@@ -393,6 +395,15 @@ func (w *WebviewWindow) SetURL(s string) Window {
 	if w.impl != nil {
 		InvokeSync(func() {
 			w.impl.setURL(s)
+		})
+	}
+	return w
+}
+
+func (w *WebviewWindow) SetHTTPClient(c *http.Client) Window {
+	if w.impl != nil {
+		InvokeSync(func() {
+			w.impl.setHTTPClient(c)
 		})
 	}
 	return w

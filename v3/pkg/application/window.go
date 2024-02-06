@@ -1,6 +1,8 @@
 package application
 
 import (
+	"net/http"
+
 	"github.com/AlpineAIO/wails/v3/pkg/events"
 )
 
@@ -62,6 +64,7 @@ type Window interface {
 	SetSize(width, height int) Window
 	SetTitle(title string) Window
 	SetURL(s string) Window
+	SetHTTPClient(c *http.Client) Window
 	SetZoom(magnification float64) Window
 	Show() Window
 	Size() (width int, height int)

@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"net/http"
 	"strings"
 
 	"github.com/AlpineAIO/wails/v3/pkg/application"
@@ -197,6 +198,10 @@ func (w Window) SetTitle(title string) application.Window {
 }
 
 func (w Window) SetURL(s string) application.Window {
+	return w
+}
+
+func (w Window) SetHTTPClient(c *http.Client) application.Window {
 	return w
 }
 
