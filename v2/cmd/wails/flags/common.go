@@ -6,9 +6,9 @@ import (
 	"runtime"
 	"strings"
 
+	"github.com/AlpineAIO/wails/v2/internal/system"
 	"github.com/leaanthony/slicer"
 	"github.com/pterm/pterm"
-	"github.com/wailsapp/wails/v2/internal/system"
 )
 
 type Common struct {

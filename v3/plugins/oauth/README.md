@@ -71,8 +71,8 @@ Add the plugin to the `Plugins` option in the Applications options. This example
 package main
 
 import (
-    "github.com/wailsapp/wails/v3/pkg/application"
-    "github.com/wailsapp/wails/v3/plugins/browser"
+    "github.com/AlpineAIO/wails/v3/pkg/application"
+    "github.com/AlpineAIO/wails/v3/plugins/browser"
 )
 
 func main() {
@@ -211,4 +211,4 @@ On success, the plugin will send a `wails:oauth:loggedout` event. On failure, it
 
 ## Support
 
-If you find a bug in this plugin, please raise a ticket on the Wails [Issue Tracker](https://github.com/wailsapp/wails/issues). 
+If you find a bug in this plugin, please raise a ticket on the Wails [Issue Tracker](https://github.com/AlpineAIO/wails/issues). 

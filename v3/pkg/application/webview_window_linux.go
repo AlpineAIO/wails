@@ -4,9 +4,9 @@ package application
 
 import (
 	"fmt"
-	"github.com/wailsapp/wails/v3/internal/assetserver"
-	"github.com/wailsapp/wails/v3/internal/capabilities"
-	"github.com/wailsapp/wails/v3/pkg/events"
+	"github.com/AlpineAIO/wails/v3/internal/assetserver"
+	"github.com/AlpineAIO/wails/v3/internal/capabilities"
+	"github.com/AlpineAIO/wails/v3/pkg/events"
 )
 
 var showDevTools = func(window pointer) {}

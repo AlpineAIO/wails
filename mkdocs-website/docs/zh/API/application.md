@@ -16,7 +16,7 @@ API：`New(appOptions Options) *App`
 ```go title="main.go" hl_lines="6-9"
 package main
 
-import "github.com/wailsapp/wails/v3/pkg/application"
+import "github.com/AlpineAIO/wails/v3/pkg/application"
 
 func main() {
     app := application.New(application.Options{
@@ -257,8 +257,8 @@ API：`WarningDialog()`
 
 API：`ErrorDialog()`
 
-`ErrorDialog()` 创建并返回一个具有 `ErrorDialogType` 的 `MessageDialog` 的新实
-例。此对话框设计用于在需要向用户显示错误消息时使用。
+`ErrorDialog()` 创建并返回一个具有 `ErrorDialogType` 的 `MessageDialog` 的新实例
+。此对话框设计用于在需要向用户显示错误消息时使用。
 
 ### OpenFile
 
@@ -307,8 +307,8 @@ API：`GetScreens() ([]*Screen, error)`
 
 `GetScreens()` 返回有关连接到系统的所有屏幕的信息。
 
-这是提供的 `App` 结构中导出的方法的简要摘要。请注意，有关更详细的功能或注意事
-项，请参考实际的 Go 代码或进一步的内部文档。
+这是提供的 `App` 结构中导出的方法的简要摘要。请注意，有关更详细的功能或注意事项
+，请参考实际的 Go 代码或进一步的内部文档。
 
 ## Options
 

@@ -4,7 +4,7 @@ import (
 	_ "embed"
 	"log"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
 )
 
 type GreetService struct {

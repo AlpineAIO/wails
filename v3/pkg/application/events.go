@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"sync"
 
+	"github.com/AlpineAIO/wails/v3/pkg/events"
 	"github.com/samber/lo"
-	"github.com/wailsapp/wails/v3/pkg/events"
 )
 
 type Event struct {

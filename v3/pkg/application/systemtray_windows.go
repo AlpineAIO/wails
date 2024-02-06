@@ -4,13 +4,13 @@ package application
 
 import (
 	"fmt"
-	"github.com/wailsapp/wails/v3/pkg/icons"
+	"github.com/AlpineAIO/wails/v3/pkg/icons"
 	"syscall"
 	"unsafe"
 
+	"github.com/AlpineAIO/wails/v3/pkg/events"
+	"github.com/AlpineAIO/wails/v3/pkg/w32"
 	"github.com/samber/lo"
-	"github.com/wailsapp/wails/v3/pkg/events"
-	"github.com/wailsapp/wails/v3/pkg/w32"
 )
 
 const (

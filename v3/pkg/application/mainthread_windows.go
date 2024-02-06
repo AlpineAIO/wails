@@ -7,7 +7,7 @@ import (
 	"sort"
 	"unsafe"
 
-	"github.com/wailsapp/wails/v3/pkg/w32"
+	"github.com/AlpineAIO/wails/v3/pkg/w32"
 )
 
 var (
@@ -28,7 +28,7 @@ func (m *windowsApp) initMainLoop() {
 
 	// We need a hidden window so we can PostMessage to it, if we don't use PostMessage for dispatching to a HWND
 	// messages might get lost if a modal inner loop is being run.
-	// We had this once in V2: https://github.com/wailsapp/wails/issues/969
+	// We had this once in V2: https://github.com/AlpineAIO/wails/issues/969
 	// See: https://devblogs.microsoft.com/oldnewthing/20050426-18/?p=35783
 	// See also: https://learn.microsoft.com/en-us/windows/win32/winmsg/using-messages-and-message-queues#creating-a-message-loop
 	// > Because the system directs messages to individual windows in an application, a thread must create at least one window before starting its message loop.

@@ -2,10 +2,10 @@ package main
 
 import (
 	_ "embed"
-	"github.com/wailsapp/wails/v3/internal/parser/testdata/function_from_nested_imported_package/services/other"
+	"github.com/AlpineAIO/wails/v3/internal/parser/testdata/function_from_nested_imported_package/services/other"
 	"log"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
 )
 
 // GreetService is great

@@ -1,6 +1,10 @@
 # What's New in Wails v3 Alpha
 
-Wails v3 Alpha moves from the v2's single-window, declarative API to a procedural one. This intuitive API makes code development easier, boosts readability, and unlocks complex multi-window apps. Wails v3 Alpha isn't just an improvement on past versions - it reimagines desktop application development capabilities with Go and modern web technologies.
+Wails v3 Alpha moves from the v2's single-window, declarative API to a
+procedural one. This intuitive API makes code development easier, boosts
+readability, and unlocks complex multi-window apps. Wails v3 Alpha isn't just an
+improvement on past versions - it reimagines desktop application development
+capabilities with Go and modern web technologies.
 
 ## Multiple Windows
 
@@ -14,7 +18,7 @@ import (
         _ "embed"
         "log"
 
-        "github.com/wailsapp/wails/v3/pkg/application"
+        "github.com/AlpineAIO/wails/v3/pkg/application"
 )
 
 //go:embed assets/*
@@ -70,8 +74,8 @@ import (
 	"log"
 	"runtime"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
-	"github.com/wailsapp/wails/v3/pkg/icons"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/icons"
 )
 
 func main() {
@@ -230,8 +234,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
-	"github.com/wailsapp/wails/v3/pkg/events"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/events"
 )
 
 //go:embed assets
@@ -301,7 +305,7 @@ An experimental feature to call runtime methods using plain html, similar to
 [htmx](https://htmx.org).
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -334,6 +338,9 @@ An experimental feature to call runtime methods using plain html, similar to
   </body>
 </html>
 ```
+
 ## Examples
 
-There are more examples available in the [examples](https://github.com/wailsapp/wails/tree/v3-alpha/v3/examples) directory. Check them out!
+There are more examples available in the
+[examples](https://github.com/AlpineAIO/wails/tree/v3-alpha/v3/examples)
+directory. Check them out!

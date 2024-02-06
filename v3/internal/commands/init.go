@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"regexp"
 
-	"github.com/wailsapp/wails/v3/internal/flags"
-	"github.com/wailsapp/wails/v3/internal/templates"
+	"github.com/AlpineAIO/wails/v3/internal/flags"
+	"github.com/AlpineAIO/wails/v3/internal/templates"
 
 	"github.com/pterm/pterm"
 )

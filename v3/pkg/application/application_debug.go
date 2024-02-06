@@ -3,9 +3,9 @@
 package application
 
 import (
+	"github.com/AlpineAIO/wails/v3/internal/version"
 	"github.com/go-git/go-git/v5"
 	"github.com/samber/lo"
-	"github.com/wailsapp/wails/v3/internal/version"
 	"path/filepath"
 	"runtime/debug"
 )
@@ -41,7 +41,7 @@ func (a *App) logStartup() {
 	var args []any
 
 	wailsPackage, _ := lo.Find(BuildInfo.Deps, func(dep *debug.Module) bool {
-		return dep.Path == "github.com/wailsapp/wails/v3"
+		return dep.Path == "github.com/AlpineAIO/wails/v3"
 	})
 
 	wailsVersion := version.VersionString

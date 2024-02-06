@@ -6,8 +6,8 @@ import (
 	"os"
 	"runtime/debug"
 
+	"github.com/AlpineAIO/wails/v3/internal/commands"
 	"github.com/leaanthony/clir"
-	"github.com/wailsapp/wails/v3/internal/commands"
 )
 
 func init() {

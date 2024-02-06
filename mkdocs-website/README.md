@@ -10,7 +10,7 @@ If you do not wish to build it locally, it is available online at
 Install the wails3 CLI if you haven't already:
 
 ```shell
-go install github.com/wailsapp/wails/v3/cmd/wails3@latest
+go install github.com/AlpineAIO/wails/v3/cmd/wails3@latest
 ```
 
 The documentation uses mkdocs, so you will need to install

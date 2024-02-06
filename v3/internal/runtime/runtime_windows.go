@@ -4,7 +4,7 @@ package runtime
 
 import (
 	"fmt"
-	"github.com/wailsapp/wails/v3/pkg/w32"
+	"github.com/AlpineAIO/wails/v3/pkg/w32"
 )
 
 var invoke = `window._wails.invoke=window.chrome.webview.postMessage;`

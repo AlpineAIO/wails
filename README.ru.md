@@ -6,7 +6,7 @@
   Собирайте Desktop приложения используя Go и Web технологии
   <br/>
   <br/>
-  <a href="https://github.com/wailsapp/wails/blob/master/LICENSE">
+  <a href="https://github.com/AlpineAIO/wails/blob/master/LICENSE">
     <img alt="GitHub" src="https://img.shields.io/github/license/wailsapp/wails"/>
   </a>
   <a href="https://goreportcard.com/report/github.com/wailsapp/wails">
@@ -15,7 +15,7 @@
   <a href="https://pkg.go.dev/github.com/wailsapp/wails">
     <img src="https://pkg.go.dev/badge/github.com/wailsapp/wails.svg" alt="Go Reference"/>
   </a>
-  <a href="https://github.com/wailsapp/wails/issues">
+  <a href="https://github.com/AlpineAIO/wails/issues">
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="CodeFactor" />
   </a>
   <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fwailsapp%2Fwails?ref=badge_shield" alt="FOSSA Status">
@@ -28,10 +28,10 @@
     <img alt="Discord" src="https://dcbadge.vercel.app/api/server/BrRSWTaxVK?style=flat"/>
   </a>
   <br/>
-  <a href="https://github.com/wailsapp/wails/actions/workflows/build-and-test.yml" rel="nofollow">
-    <img src="https://img.shields.io/github/actions/workflow/status/wailsapp/wails/build-and-test.yml?branch=master&logo=Github" alt="Build" />
+  <a href="https://github.com/AlpineAIO/wails/actions/workflows/build-and-test.yml" rel="nofollow">
+    <img src="https://img.shields.io/github/actions/workflow/status/AlpineAIO/wails/build-and-test.yml?branch=master&logo=Github" alt="Build" />
   </a>
-  <a href="https://github.com/wailsapp/wails/tags" rel="nofollow">
+  <a href="https://github.com/AlpineAIO/wails/tags" rel="nofollow">
     <img alt="GitHub tag (latest SemVer pre-release)" src="https://img.shields.io/github/v/tag/wailsapp/wails?include_prereleases&label=version"/>
   </a>
 </p>
@@ -41,7 +41,8 @@
 <samp>
 
 [English](README.md) · [简体中文](README.zh-Hans.md) · [日本語](README.ja.md) ·
-[한국어](README.ko.md) · [Español](README.es.md) · [Русский](README.ru.md) · [Francais](README.fr.md) · [Uzbek](README.uz.md)
+[한국어](README.ko.md) · [Español](README.es.md) · [Русский](README.ru.md) ·
+[Francais](README.fr.md) · [Uzbek](README.uz.md)
 
 </samp>
 </strong>
@@ -63,15 +64,17 @@
 
 ## Вступление
 
-Обычно, веб-интерфейсы для программ Go - это встроенный веб-сервер и веб-браузер.
-У Walls другой подход: он оборачивает как код Go, так и веб-интерфейс в один бинарник (EXE файл).
-Облегчает вам создание вашего приложения, управляя созданием, компиляцией и объединением проектов.
-Все ограничивается лишь вашей фантазией!
+Обычно, веб-интерфейсы для программ Go - это встроенный веб-сервер и
+веб-браузер. У Walls другой подход: он оборачивает как код Go, так и
+веб-интерфейс в один бинарник (EXE файл). Облегчает вам создание вашего
+приложения, управляя созданием, компиляцией и объединением проектов. Все
+ограничивается лишь вашей фантазией!
 
 ## Особенности
 
 - Использование Go для backend
-- Поддержка любой frontend технологии, с которой вы уже знакомы для создания вашего UI
+- Поддержка любой frontend технологии, с которой вы уже знакомы для создания
+  вашего UI
 - Быстрое создание frontend для ваших программ, используя готовые шаблоны
 - Очень лёгкий вызов функция Go из JavaScript
 - Автогене рация TypeScript типов для Go структур и функций
@@ -85,12 +88,14 @@
 
 ### Roadmap
 
-Roadmap проекта вы можете найти [здесь](https://github.com/wailsapp/wails/discussions/1484).
-Пожалуйста, проконсультируйтесь перед предложением улучшения.
+Roadmap проекта вы можете найти
+[здесь](https://github.com/AlpineAIO/wails/discussions/1484). Пожалуйста,
+проконсультируйтесь перед предложением улучшения.
 
 ## Быстрый старт
 
-Инструкции по установке находятся на [официальном сайте](https://wails.io/docs/gettingstarted/installation).
+Инструкции по установке находятся на
+[официальном сайте](https://wails.io/docs/gettingstarted/installation).
 
 ## Спонсоры
 
@@ -105,20 +110,24 @@ Roadmap проекта вы можете найти [здесь](https://github.
 
 - Это альтернатива Electron?
 
-  Зависит от ваших требований. Wails разработан для легкого создания Desktop приложений или расширения интерфейсной
-  части к своим существующим приложениям программистам Go. Wails действительно предлагает встроенные элементы, такие как
-  меню и диалоги, так что его можно считать облегченной альтернативой Electron.
+  Зависит от ваших требований. Wails разработан для легкого создания Desktop
+  приложений или расширения интерфейсной части к своим существующим приложениям
+  программистам Go. Wails действительно предлагает встроенные элементы, такие
+  как меню и диалоги, так что его можно считать облегченной альтернативой
+  Electron.
 
 - Для кого нацелен этот проект?
 
-  Для Golang программистов, которые хотят создавать приложение используя HTML JS и CSS, без создания Web сервера и
-  открытия браузера для его просмотра.
+  Для Golang программистов, которые хотят создавать приложение используя HTML JS
+  и CSS, без создания Web сервера и открытия браузера для его просмотра.
 
 - Что это за название?
 
-  Когда я увидел WebView, я подумал: "Что мне действительно нужно, так это инструменты для создания приложения WebView,
-  немного похожие на Rails для Ruby". Итак, изначально это была игра слов (Webview on Rails). Просто так получилось, что
-  это также омофон английского названия для [Страны](https://en.wikipedia.org/wiki/Wales) от куда я родом. Так что это
+  Когда я увидел WebView, я подумал: "Что мне действительно нужно, так это
+  инструменты для создания приложения WebView, немного похожие на Rails для
+  Ruby". Итак, изначально это была игра слов (Webview on Rails). Просто так
+  получилось, что это также омофон английского названия для
+  [Страны](https://en.wikipedia.org/wiki/Wales) от куда я родом. Так что это
   прижилось.
 
 ## График звёздочек репозитория, относительно времени
@@ -127,8 +136,9 @@ Roadmap проекта вы можете найти [здесь](https://github.
 
 ## Контребьюторы
 
-Список участников слишком большой для README! У всех замечательных людей, которые внесли свой вклад в этот
-проект, есть своя [страничка](https://wails.io/credits#contributors).
+Список участников слишком большой для README! У всех замечательных людей,
+которые внесли свой вклад в этот проект, есть своя
+[страничка](https://wails.io/credits#contributors).
 
 ## Лицензия
 

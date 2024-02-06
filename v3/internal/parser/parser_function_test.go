@@ -111,10 +111,10 @@ func TestParseFunction(t *testing.T) {
 						},
 					},
 				},
-				"github.com/wailsapp/wails/v3/internal/parser/testdata/function_from_imported_package/services": {
+				"github.com/AlpineAIO/wails/v3/internal/parser/testdata/function_from_imported_package/services": {
 					"OtherService": {
 						{
-							Package:    "github.com/wailsapp/wails/v3/internal/parser/testdata/function_from_imported_package/services",
+							Package:    "github.com/AlpineAIO/wails/v3/internal/parser/testdata/function_from_imported_package/services",
 							Name:       "Yay",
 							DocComment: "Yay does this and that",
 							Outputs: []*Parameter{
@@ -123,7 +123,7 @@ func TestParseFunction(t *testing.T) {
 										Name:      "Address",
 										IsStruct:  true,
 										IsPointer: true,
-										Package:   "github.com/wailsapp/wails/v3/internal/parser/testdata/function_from_imported_package/services",
+										Package:   "github.com/AlpineAIO/wails/v3/internal/parser/testdata/function_from_imported_package/services",
 									},
 								},
 							},
@@ -151,34 +151,34 @@ func TestParseFunction(t *testing.T) {
 									Name:      "Address",
 									IsStruct:  true,
 									IsPointer: true,
-									Package:   "github.com/wailsapp/wails/v3/internal/parser/testdata/function_from_imported_package/services",
+									Package:   "github.com/AlpineAIO/wails/v3/internal/parser/testdata/function_from_imported_package/services",
 								},
 							},
 						},
 					},
 				},
-				"github.com/wailsapp/wails/v3/internal/parser/testdata/function_from_imported_package/services": {
+				"github.com/AlpineAIO/wails/v3/internal/parser/testdata/function_from_imported_package/services": {
 					"Address": {
 						Name: "Address",
 						Fields: []*Field{
 							{
 								Name: "Street",
 								Type: &ParameterType{
-									Package: "github.com/wailsapp/wails/v3/internal/parser/testdata/function_from_imported_package/services",
+									Package: "github.com/AlpineAIO/wails/v3/internal/parser/testdata/function_from_imported_package/services",
 									Name:    "string",
 								},
 							},
 							{
 								Name: "State",
 								Type: &ParameterType{
-									Package: "github.com/wailsapp/wails/v3/internal/parser/testdata/function_from_imported_package/services",
+									Package: "github.com/AlpineAIO/wails/v3/internal/parser/testdata/function_from_imported_package/services",
 									Name:    "string",
 								},
 							},
 							{
 								Name: "Country",
 								Type: &ParameterType{
-									Package: "github.com/wailsapp/wails/v3/internal/parser/testdata/function_from_imported_package/services",
+									Package: "github.com/AlpineAIO/wails/v3/internal/parser/testdata/function_from_imported_package/services",
 									Name:    "string",
 								},
 							},

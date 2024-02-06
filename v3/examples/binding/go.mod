@@ -4,7 +4,7 @@ go 1.21.1
 
 toolchain go1.21.4
 
-require github.com/wailsapp/wails/v3 v3.0.0-alpha.0
+require github.com/AlpineAIO/wails/v3 v3.0.0-alpha.0
 
 require (
 	github.com/Microsoft/go-winio v0.4.16 // indirect
@@ -47,6 +47,6 @@ require (
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 )
 
-replace github.com/wailsapp/wails/v3 => ../..
+replace github.com/AlpineAIO/wails/v3 => ../..
 
 replace github.com/ebitengine/purego v0.4.0-alpha.4 => github.com/tmclane/purego v0.0.0-20230601213035-1f25e70d7b01

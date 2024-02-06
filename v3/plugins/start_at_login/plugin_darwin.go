@@ -4,10 +4,10 @@ package start_at_login
 
 import (
 	"fmt"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/mac"
 	"github.com/pkg/errors"
 	"github.com/samber/lo"
-	"github.com/wailsapp/wails/v3/pkg/application"
-	"github.com/wailsapp/wails/v3/pkg/mac"
 	"os"
 	"os/exec"
 	"path/filepath"

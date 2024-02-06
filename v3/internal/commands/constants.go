@@ -1,7 +1,7 @@
 package commands
 
 import (
-	"github.com/wailsapp/wails/v3/internal/parser"
+	"github.com/AlpineAIO/wails/v3/internal/parser"
 	"os"
 )
 

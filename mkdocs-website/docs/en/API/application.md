@@ -20,7 +20,7 @@ instance will be returned instead of creating a new one.
 ```go title="main.go" hl_lines="6-9"
 package main
 
-import "github.com/wailsapp/wails/v3/pkg/application"
+import "github.com/AlpineAIO/wails/v3/pkg/application"
 
 func main() {
     app := application.New(application.Options{

@@ -6,7 +6,7 @@
   Construye aplicaciones de escritorio usando Go y tecnologías web.
   <br/>
   <br/>
-  <a href="https://github.com/wailsapp/wails/blob/master/LICENSE">
+  <a href="https://github.com/AlpineAIO/wails/blob/master/LICENSE">
     <img alt="GitHub" src="https://img.shields.io/github/license/wailsapp/wails"/>
   </a>
   <a href="https://goreportcard.com/report/github.com/wailsapp/wails">
@@ -15,7 +15,7 @@
   <a href="https://pkg.go.dev/github.com/wailsapp/wails">
     <img src="https://pkg.go.dev/badge/github.com/wailsapp/wails.svg" alt="Go Reference"/>
   </a>
-  <a href="https://github.com/wailsapp/wails/issues">
+  <a href="https://github.com/AlpineAIO/wails/issues">
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="CodeFactor" />
   </a>
   <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fwailsapp%2Fwails?ref=badge_shield" alt="FOSSA Status">
@@ -28,10 +28,10 @@
     <img alt="Discord" src="https://dcbadge.vercel.app/api/server/BrRSWTaxVK?style=flat"/>
   </a>
   <br/>
-  <a href="https://github.com/wailsapp/wails/actions/workflows/build-and-test.yml" rel="nofollow">
-    <img src="https://img.shields.io/github/actions/workflow/status/wailsapp/wails/build-and-test.yml?branch=master&logo=Github" alt="Build" />
+  <a href="https://github.com/AlpineAIO/wails/actions/workflows/build-and-test.yml" rel="nofollow">
+    <img src="https://img.shields.io/github/actions/workflow/status/AlpineAIO/wails/build-and-test.yml?branch=master&logo=Github" alt="Build" />
   </a>
-  <a href="https://github.com/wailsapp/wails/tags" rel="nofollow">
+  <a href="https://github.com/AlpineAIO/wails/tags" rel="nofollow">
     <img alt="GitHub tag (latest SemVer pre-release)" src="https://img.shields.io/github/v/tag/wailsapp/wails?include_prereleases&label=version"/>
   </a>
 </p>
@@ -41,8 +41,8 @@
 <samp>
 
 [English](README.md) · [简体中文](README.zh-Hans.md) · [日本語](README.ja.md) ·
-[한국어](README.ko.md) · [Español](README.es.md) · [Português](README.pt-br.md) ·
-[Русский](README.ru.md) · [Francais](README.fr.md) · [Uzbek](README.uz.md)
+[한국어](README.ko.md) · [Español](README.es.md) · [Português](README.pt-br.md)
+· [Русский](README.ru.md) · [Francais](README.fr.md) · [Uzbek](README.uz.md)
 
 </samp>
 </strong>
@@ -92,7 +92,7 @@ creativo!
 ### Plan de Trabajo
 
 El plan de trabajo se puede encontrar
-[aqui](https://github.com/wailsapp/wails/discussions/1484). Por favor,
+[aqui](https://github.com/AlpineAIO/wails/discussions/1484). Por favor,
 consúltalo antes de abrir una solicitud de mejora.
 
 ## Empezando

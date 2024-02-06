@@ -1,6 +1,6 @@
-# v3有哪些新功能？
+# v3 有哪些新功能？
 
-!!! note v3版本中将包含的功能可能会有所更改。
+!!! note v3 版本中将包含的功能可能会有所更改。
 
 ## 多窗口
 
@@ -13,7 +13,7 @@ import (
         _ "embed"
         "log"
 
-        "github.com/wailsapp/wails/v3/pkg/application"
+        "github.com/AlpineAIO/wails/v3/pkg/application"
 )
 
 //go:embed assets/*
@@ -68,8 +68,8 @@ import (
 	"log"
 	"runtime"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
-	"github.com/wailsapp/wails/v3/pkg/icons"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/icons"
 )
 
 func main() {
@@ -124,22 +124,22 @@ func main() {
 
 ## 插件
 
-插件允许您扩展Wails系统的功能。不仅可以在Go中使用插件方法，还可以从Javascript中
-调用插件方法。包含的插件有：
+插件允许您扩展 Wails 系统的功能。不仅可以在 Go 中使用插件方法，还可以从
+Javascript 中调用插件方法。包含的插件有：
 
 - kvstore - 键/值存储
 - browser - 在浏览器中打开链接
 - log - 自定义日志记录器
-- oauth - 处理OAuth身份验证并支持60个提供商
+- oauth - 处理 OAuth 身份验证并支持 60 个提供商
 - single_instance - 仅允许运行一个应用程序副本
-- sqlite - 向应用程序添加SQLite数据库。使用现代纯Go库
+- sqlite - 向应用程序添加 SQLite 数据库。使用现代纯 Go 库
 - start_at_login - 注册/注销应用程序以在登录时启动
 
 ## 改进的绑定生成
 
-v3使用新的静态分析器生成绑定。这使得生成绑定非常快速，并保留了绑定中的注释和参数
-名称。默认情况下，绑定使用ID而不是字符串进行调用。这提供了性能提升，并允许使用混
-淆工具，如[garble](https://github.com/burrowers/garble)。
+v3 使用新的静态分析器生成绑定。这使得生成绑定非常快速，并保留了绑定中的注释和参
+数名称。默认情况下，绑定使用 ID 而不是字符串进行调用。这提供了性能提升，并允许使
+用混淆工具，如[garble](https://github.com/burrowers/garble)。
 
 通过在项目目录中运行 `wails3 generate bindings` 来生成绑定。
 
@@ -178,15 +178,15 @@ window.go.main = {
 
 ## 改进的构建系统
 
-在v2中，构建系统完全不透明且难以自定义。在v3中，可以使用标准的Go工具构建所有内
-容。
+在 v2 中，构建系统完全不透明且难以自定义。在 v3 中，可以使用标准的 Go 工具构建所
+有内容。
 
-v2构建系统完成的所有繁重工作，例如图标生成，已作为CLI中的工具命令添加。我们
-将[Taskfile](https://taskfile.dev)整合到CLI中，以协调这些调用，以带来与v2相同的
-开发人员体验。然而，这种方法在灵活性和易用性之间达到了最佳平衡，因为现在您可以根
-据需要自定义构建过程。
+v2 构建系统完成的所有繁重工作，例如图标生成，已作为 CLI 中的工具命令添加。我们
+将[Taskfile](https://taskfile.dev)整合到 CLI 中，以协调这些调用，以带来与 v2 相
+同的开发人员体验。然而，这种方法在灵活性和易用性之间达到了最佳平衡，因为现在您可
+以根据需要自定义构建过程。
 
-您甚至可以使用make，如果那是您的菜！
+您甚至可以使用 make，如果那是您的菜！
 
 ```yaml title="来自Taskfile.yml的片段"
 build:darwin:
@@ -209,8 +209,8 @@ build:darwin:
 现在为许多运行时操作发出事件，允许您挂钩应用程序/系统事件。在存在常见平台事件的
 地方，还发出了跨平台（通用）事件，允许您在跨平台上编写相同的事件处理方法。
 
-还可以注册事件钩子。这些钩子类似于`On`方法，但是是同步的，并允许您取消事件。例
-如，在关闭窗口之前显示确认对话框的示例。
+还可以注册事件钩子。这些钩子类似于`On`方法，但是是同步的，并允许您取消事件。例如
+，在关闭窗口之前显示确认对话框的示例。
 
 ```go
 package main
@@ -220,8 +220,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
-	"github.com/wailsapp/wails/v3/pkg/events"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/events"
 )
 
 //go:embed assets
@@ -285,12 +285,12 @@ func main() {
 
 ```
 
-## Wails标记语言（wml）
+## Wails 标记语言（wml）
 
-一种实验性的功能，使用纯HTML调用运行时方法，类似于[htmx](https://htmx.org)。
+一种实验性的功能，使用纯 HTML 调用运行时方法，类似于[htmx](https://htmx.org)。
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

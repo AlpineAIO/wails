@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
 )
 
 type Config struct {
@@ -49,7 +49,7 @@ func (p *Plugin) Shutdown() {
 
 // Name returns the name of the plugin.
 func (p *Plugin) Name() string {
-	return "github.com/wailsapp/wails/v3/plugins/single-instance"
+	return "github.com/AlpineAIO/wails/v3/plugins/single-instance"
 }
 
 // Init is called when the app is starting up. You can use this to

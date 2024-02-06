@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/AlpineAIO/wails/v3/pkg/events"
 	"github.com/samber/lo"
-	"github.com/wailsapp/wails/v3/pkg/events"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
 )
 
 func main() {

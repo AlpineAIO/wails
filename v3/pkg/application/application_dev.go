@@ -3,7 +3,7 @@
 package application
 
 import (
-	"github.com/wailsapp/wails/v3/internal/assetserver"
+	"github.com/AlpineAIO/wails/v3/internal/assetserver"
 	"net/http"
 	"time"
 )

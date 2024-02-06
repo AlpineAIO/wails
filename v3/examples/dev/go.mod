@@ -2,7 +2,7 @@ module changeme
 
 go 1.21
 
-require github.com/wailsapp/wails/v3 v3.0.0-alpha.0
+require github.com/AlpineAIO/wails/v3 v3.0.0-alpha.0
 
 require (
 	github.com/Microsoft/go-winio v0.4.16 // indirect
@@ -45,4 +45,4 @@ require (
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 )
 
-replace github.com/wailsapp/wails/v3 => ../..
+replace github.com/AlpineAIO/wails/v3 => ../..

@@ -160,10 +160,10 @@ func TestParseStructLiteralMultiple(t *testing.T) {
 						},
 					},
 				},
-				"github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services": {
+				"github.com/AlpineAIO/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services": {
 					"OtherService": {
 						{
-							Package:    "github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
+							Package:    "github.com/AlpineAIO/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
 							Name:       "Yay",
 							DocComment: "Yay does this and that",
 							Outputs: []*Parameter{
@@ -172,7 +172,7 @@ func TestParseStructLiteralMultiple(t *testing.T) {
 										Name:      "Address",
 										IsStruct:  true,
 										IsPointer: true,
-										Package:   "github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
+										Package:   "github.com/AlpineAIO/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
 									},
 								},
 							},
@@ -199,34 +199,34 @@ func TestParseStructLiteralMultiple(t *testing.T) {
 									Name:      "Address",
 									IsStruct:  true,
 									IsPointer: true,
-									Package:   "github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
+									Package:   "github.com/AlpineAIO/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
 								},
 							},
 						},
 					},
 				},
-				"github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services": {
+				"github.com/AlpineAIO/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services": {
 					"Address": {
 						Name: "Address",
 						Fields: []*Field{
 							{
 								Name: "Street",
 								Type: &ParameterType{
-									Package: "github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
+									Package: "github.com/AlpineAIO/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
 									Name:    "string",
 								},
 							},
 							{
 								Name: "State",
 								Type: &ParameterType{
-									Package: "github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
+									Package: "github.com/AlpineAIO/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
 									Name:    "string",
 								},
 							},
 							{
 								Name: "Country",
 								Type: &ParameterType{
-									Package: "github.com/wailsapp/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
+									Package: "github.com/AlpineAIO/wails/v3/internal/parser/testdata/struct_literal_multiple_other/services",
 									Name:    "string",
 								},
 							},

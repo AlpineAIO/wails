@@ -8,9 +8,9 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/wailsapp/wails/v3/pkg/icons"
+	"github.com/AlpineAIO/wails/v3/pkg/icons"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
 )
 
 func main() {

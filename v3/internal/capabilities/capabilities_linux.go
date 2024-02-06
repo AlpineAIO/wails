@@ -2,7 +2,7 @@
 
 package capabilities
 
-import "github.com/wailsapp/wails/v3/internal/operatingsystem"
+import "github.com/AlpineAIO/wails/v3/internal/operatingsystem"
 
 func NewCapabilities() Capabilities {
 	c := Capabilities{}

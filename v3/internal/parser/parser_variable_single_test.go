@@ -146,10 +146,10 @@ func TestParseVariableSingle(t *testing.T) {
 						},
 					},
 				},
-				"github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services": {
+				"github.com/AlpineAIO/wails/v3/internal/parser/testdata/variable_single_from_other_function/services": {
 					"OtherService": {
 						{
-							Package:    "github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
+							Package:    "github.com/AlpineAIO/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
 							Name:       "Yay",
 							DocComment: "Yay does this and that",
 							Outputs: []*Parameter{
@@ -158,7 +158,7 @@ func TestParseVariableSingle(t *testing.T) {
 										Name:      "Address",
 										IsStruct:  true,
 										IsPointer: true,
-										Package:   "github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
+										Package:   "github.com/AlpineAIO/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
 									},
 								},
 							},
@@ -186,34 +186,34 @@ func TestParseVariableSingle(t *testing.T) {
 									Name:      "Address",
 									IsStruct:  true,
 									IsPointer: true,
-									Package:   "github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
+									Package:   "github.com/AlpineAIO/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
 								},
 							},
 						},
 					},
 				},
-				"github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services": {
+				"github.com/AlpineAIO/wails/v3/internal/parser/testdata/variable_single_from_other_function/services": {
 					"Address": {
 						Name: "Address",
 						Fields: []*Field{
 							{
 								Name: "Street",
 								Type: &ParameterType{
-									Package: "github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
+									Package: "github.com/AlpineAIO/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
 									Name:    "string",
 								},
 							},
 							{
 								Name: "State",
 								Type: &ParameterType{
-									Package: "github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
+									Package: "github.com/AlpineAIO/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
 									Name:    "string",
 								},
 							},
 							{
 								Name: "Country",
 								Type: &ParameterType{
-									Package: "github.com/wailsapp/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
+									Package: "github.com/AlpineAIO/wails/v3/internal/parser/testdata/variable_single_from_other_function/services",
 									Name:    "string",
 								},
 							},

@@ -24,7 +24,7 @@ func (p *Plugin) Shutdown() {}
 // Name returns the name of the plugin.
 // You should use the go module format e.g. github.com/myuser/myplugin
 func (p *Plugin) Name() string {
-	return "github.com/wailsapp/wails/v3/plugins/start_at_login"
+	return "github.com/AlpineAIO/wails/v3/plugins/start_at_login"
 }
 
 func (p *Plugin) Init() error {

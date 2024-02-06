@@ -1,8 +1,8 @@
 package parser
 
 import (
+	"github.com/AlpineAIO/wails/v3/internal/flags"
 	"github.com/google/go-cmp/cmp"
-	"github.com/wailsapp/wails/v3/internal/flags"
 	"os"
 	"path/filepath"
 	"strings"

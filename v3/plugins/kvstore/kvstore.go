@@ -2,7 +2,7 @@ package kvstore
 
 import (
 	"encoding/json"
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
 	"io"
 	"os"
 	"sync"
@@ -46,7 +46,7 @@ func (kvs *KeyValueStore) Shutdown() {
 
 // Name returns the name of the plugin.
 func (kvs *KeyValueStore) Name() string {
-	return "github.com/wailsapp/wails/v3/plugins/kvstore"
+	return "github.com/AlpineAIO/wails/v3/plugins/kvstore"
 }
 
 // Init is called when the plugin is loaded. It is passed the application.App

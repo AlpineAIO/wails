@@ -9,9 +9,9 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/AlpineAIO/wails/v3/internal/operatingsystem"
+	"github.com/AlpineAIO/wails/v3/pkg/events"
 	"github.com/godbus/dbus/v5"
-	"github.com/wailsapp/wails/v3/internal/operatingsystem"
-	"github.com/wailsapp/wails/v3/pkg/events"
 )
 
 func init() {

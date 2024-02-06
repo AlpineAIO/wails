@@ -1,8 +1,8 @@
 package commands
 
 import (
+	"github.com/AlpineAIO/wails/v3/internal/signal"
 	"github.com/atterpac/refresh/engine"
-	"github.com/wailsapp/wails/v3/internal/signal"
 	"os"
 )
 

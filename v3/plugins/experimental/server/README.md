@@ -11,8 +11,8 @@ Add the plugin to the `Plugins` option in the Applications options:
 package main
 
 import (
-    "github.com/wailsapp/wails/v3/pkg/application"
-    "github.com/wailsapp/wails/v3/plugins/server"
+    "github.com/AlpineAIO/wails/v3/pkg/application"
+    "github.com/AlpineAIO/wails/v3/plugins/server"
 )
 
 func main() {
@@ -31,4 +31,4 @@ func main() {
 
 ## Support
 
-If you find a bug in this plugin, please raise a ticket on the Wails [Issue Tracker](https://github.com/wailsapp/wails/issues).
+If you find a bug in this plugin, please raise a ticket on the Wails [Issue Tracker](https://github.com/AlpineAIO/wails/issues).

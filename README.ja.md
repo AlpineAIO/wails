@@ -8,7 +8,7 @@
   GoとWebの技術を用いてデスクトップアプリケーションを構築します。
   <br/>
   <br/>
-  <a href="https://github.com/wailsapp/wails/blob/master/LICENSE">
+  <a href="https://github.com/AlpineAIO/wails/blob/master/LICENSE">
     <img alt="GitHub" src="https://img.shields.io/github/license/wailsapp/wails"/>
   </a>
   <a href="https://goreportcard.com/report/github.com/wailsapp/wails">
@@ -17,7 +17,7 @@
   <a href="https://pkg.go.dev/github.com/wailsapp/wails">
     <img src="https://pkg.go.dev/badge/github.com/wailsapp/wails.svg" alt="Go Reference"/>
   </a>
-  <a href="https://github.com/wailsapp/wails/issues">
+  <a href="https://github.com/AlpineAIO/wails/issues">
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="CodeFactor" />
   </a>
   <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fwailsapp%2Fwails?ref=badge_shield" alt="FOSSA Status">
@@ -30,10 +30,10 @@
     <img alt="Discord" src="https://dcbadge.vercel.app/api/server/BrRSWTaxVK?style=flat"/>
   </a>
   <br/>
-  <a href="https://github.com/wailsapp/wails/actions/workflows/build-and-test.yml" rel="nofollow">
-    <img src="https://img.shields.io/github/actions/workflow/status/wailsapp/wails/build-and-test.yml?branch=master&logo=Github" alt="Build" />
+  <a href="https://github.com/AlpineAIO/wails/actions/workflows/build-and-test.yml" rel="nofollow">
+    <img src="https://img.shields.io/github/actions/workflow/status/AlpineAIO/wails/build-and-test.yml?branch=master&logo=Github" alt="Build" />
   </a>
-  <a href="https://github.com/wailsapp/wails/tags" rel="nofollow">
+  <a href="https://github.com/AlpineAIO/wails/tags" rel="nofollow">
     <img alt="GitHub tag (latest SemVer pre-release)" src="https://img.shields.io/github/v/tag/wailsapp/wails?include_prereleases&label=version"/>
   </a>
 </p>
@@ -43,8 +43,8 @@
 <samp>
 
 [English](README.md) · [简体中文](README.zh-Hans.md) · [日本語](README.ja.md) ·
-[한국어](README.ko.md) · [Español](README.es.md) · [Português](README.pt-br.md) ·
-[Русский](README.ru.md) · [Francais](README.fr.md) · [Uzbek](README.uz.md)
+[한국어](README.ko.md) · [Español](README.es.md) · [Português](README.pt-br.md)
+· [Русский](README.ru.md) · [Francais](README.fr.md) · [Uzbek](README.uz.md)
 
 </samp>
 </strong>
@@ -64,36 +64,43 @@
 - [ライセンス](#ライセンス)
 - [インスピレーション](#インスピレーション)
 
-
 ## はじめに
 
-Go プログラムにウェブインタフェースを提供する従来の方法は内蔵のウェブサーバを経由するものですが、 Wails では異なるアプローチを提供します。
-Wails では Go のコードとウェブフロントエンドを単一のバイナリにまとめる機能を提供します。
-また、プロジェクトの作成、コンパイル、ビルドを行うためのツールが提供されています。あなたがすべきことは創造性を発揮することです！
+Go プログラムにウェブインタフェースを提供する従来の方法は内蔵のウェブサーバを経
+由するものですが、 Wails では異なるアプローチを提供します。 Wails では Go のコー
+ドとウェブフロントエンドを単一のバイナリにまとめる機能を提供します。また、プロジ
+ェクトの作成、コンパイル、ビルドを行うためのツールが提供されています。あなたがす
+べきことは創造性を発揮することです！
 
 ## 特徴
 
 - バックエンドには Go を利用しています
 - 使い慣れたフロントエンド技術を利用して UI を構築できます
-- あらかじめ用意されたテンプレートを利用することで、リッチなフロントエンドを備えた Go プログラムを素早く作成できます
+- あらかじめ用意されたテンプレートを利用することで、リッチなフロントエンドを備え
+  た Go プログラムを素早く作成できます
 - JavaScript から Go のメソッドを簡単に呼び出すことができます
-- あなたの書いた Go の構造体やメソットに応じた TypeScript の定義が自動生成されます
+- あなたの書いた Go の構造体やメソットに応じた TypeScript の定義が自動生成されま
+  す
 - ネイティブのダイアログとメニューが利用できます
 - ネイティブなダーク/ライトモードをサポートします
 - モダンな半透明や「frosted window」エフェクトをサポートしています
 - Go と JavaScript 間で統一されたイベント・システムを備えています
 - プロジェクトを素早く生成して構築する強力な cli ツールを用意しています
 - マルチプラットフォームに対応しています
-- ネイティブなレンダリングエンジンを使用しています - _つまりブラウザを埋め込んでいるわけではありません！_
+- ネイティブなレンダリングエンジンを使用しています - _つまりブラウザを埋め込んで
+  いるわけではありません！_
 
 ### ロードマップ
 
-プロジェクトのロードマップは[こちら](https://github.com/wailsapp/wails/discussions/1484)になります。  
+プロジェクトのロードマップ
+は[こちら](https://github.com/AlpineAIO/wails/discussions/1484)になります。  
 機能拡張のリクエストを出す前にご覧ください。
 
 ## 始め方
 
-インストール方法は[公式サイト](https://wails.io/docs/gettingstarted/installation)に掲載されています。
+インストール方法
+は[公式サイト](https://wails.io/docs/gettingstarted/installation)に掲載されてい
+ます。
 
 ## スポンサー
 
@@ -104,19 +111,26 @@ Wails では Go のコードとウェブフロントエンドを単一のバイ�
 
 - Electron の代替品になりますか？
 
-  それはあなたの求める要件によります。Wails は Go プログラマーが簡単に軽量のデスクトップアプリケーションを作成したり、既存のアプリケーションにフロントエンドを追加できるように設計されています。
-  Wails v2 ではメニューやダイアログといったネイティブな要素を提供するようになったため、軽量な Electron の代替となりつつあります。
+  それはあなたの求める要件によります。Wails は Go プログラマーが簡単に軽量のデス
+  クトップアプリケーションを作成したり、既存のアプリケーションにフロントエンドを
+  追加できるように設計されています。 Wails v2 ではメニューやダイアログといったネ
+  イティブな要素を提供するようになったため、軽量な Electron の代替となりつつあり
+  ます。
 
 - このプロジェクトは誰に向けたものですか？
 
-  HTML/JS/CSS のフロントエンド技術をアプリケーションにバンドルさせることで、サーバーを作成してブラウザ経由で表示させることなくアプリケーションを利用したい Go プログラマにおすすめです。
+  HTML/JS/CSS のフロントエンド技術をアプリケーションにバンドルさせることで、サー
+  バーを作成してブラウザ経由で表示させることなくアプリケーションを利用したい Go
+  プログラマにおすすめです。
 
 - 名前の由来を教えて下さい
 
   WebView を見たとき、私はこう思いました。  
-  「私が本当に欲しいのは、WebView アプリを構築するためのツールであり、Ruby に対する Rails のようなものである」と。  
+  「私が本当に欲しいのは、WebView アプリを構築するためのツールであり、Ruby に対
+  する Rails のようなものである」と。  
   そのため、最初は言葉遊びのつもりでした（Webview on Rails）。  
-  また、私の[出身国](https://en.wikipedia.org/wiki/Wales)の英語名と同音異義語でもあります。そしてこの名前が定着しました。
+  また、私の[出身国](https://en.wikipedia.org/wiki/Wales)の英語名と同音異義語で
+  もあります。そしてこの名前が定着しました。
 
 ## スター数の推移
 
@@ -125,7 +139,8 @@ Wails では Go のコードとウェブフロントエンドを単一のバイ�
 ## コントリビューター
 
 貢献してくれた方のリストが大きくなりすぎて、readme に入りきらなくなりました！  
-このプロジェクトに貢献してくれた素晴らしい方々のページは[こちら](https://wails.io/credits#contributors)です。
+このプロジェクトに貢献してくれた素晴らしい方々のページ
+は[こちら](https://wails.io/credits#contributors)です。
 
 ## ライセンス
 
@@ -148,4 +163,3 @@ Wails では Go のコードとウェブフロントエンドを単一のバイ�
 - [Bloc Party - Silent Alarm](https://open.spotify.com/album/6SsIdN05HQg2GwYLfXuzLB)
 - [Maxthor - Another World](https://open.spotify.com/album/3tklE2Fgw1hCIUstIwPBJF)
 - [Alun Tan Lan - Y Distawrwydd](https://open.spotify.com/album/0c32OywcLpdJCWWMC6vB8v)
-

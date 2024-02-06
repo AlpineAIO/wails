@@ -2,11 +2,11 @@ package oauth
 
 import (
 	"fmt"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
 	"github.com/gorilla/pat"
 	"github.com/gorilla/sessions"
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
-	"github.com/wailsapp/wails/v3/pkg/application"
 	"net/http"
 	"time"
 )
@@ -76,7 +76,7 @@ func (p *Plugin) Shutdown() {
 }
 
 func (p *Plugin) Name() string {
-	return "github.com/wailsapp/wails/v3/plugins/oauth"
+	return "github.com/AlpineAIO/wails/v3/plugins/oauth"
 }
 
 func (p *Plugin) Init() error {

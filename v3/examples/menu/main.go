@@ -5,7 +5,7 @@ import (
 	"log"
 	"runtime"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
 )
 
 //go:embed icon.png

@@ -3,8 +3,8 @@
 package commands_test
 
 import (
-	"github.com/wailsapp/wails/v3/internal/commands"
-	"github.com/wailsapp/wails/v3/internal/s"
+	"github.com/AlpineAIO/wails/v3/internal/commands"
+	"github.com/AlpineAIO/wails/v3/internal/s"
 	"testing"
 )
 

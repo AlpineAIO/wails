@@ -5,13 +5,13 @@ import (
 	"os"
 	"plugin_demo/plugins/hashes"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
-	"github.com/wailsapp/wails/v3/plugins/experimental/server"
-	"github.com/wailsapp/wails/v3/plugins/kvstore"
-	"github.com/wailsapp/wails/v3/plugins/log"
-	"github.com/wailsapp/wails/v3/plugins/single_instance"
-	"github.com/wailsapp/wails/v3/plugins/sqlite"
-	"github.com/wailsapp/wails/v3/plugins/start_at_login"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/plugins/experimental/server"
+	"github.com/AlpineAIO/wails/v3/plugins/kvstore"
+	"github.com/AlpineAIO/wails/v3/plugins/log"
+	"github.com/AlpineAIO/wails/v3/plugins/single_instance"
+	"github.com/AlpineAIO/wails/v3/plugins/sqlite"
+	"github.com/AlpineAIO/wails/v3/plugins/start_at_login"
 )
 
 //go:embed assets/*

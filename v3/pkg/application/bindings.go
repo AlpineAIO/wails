@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/wailsapp/wails/v3/internal/hash"
+	"github.com/AlpineAIO/wails/v3/internal/hash"
 
 	"github.com/samber/lo"
 )

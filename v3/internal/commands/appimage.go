@@ -3,8 +3,8 @@ package commands
 import (
 	_ "embed"
 	"fmt"
+	"github.com/AlpineAIO/wails/v3/internal/s"
 	"github.com/pterm/pterm"
-	"github.com/wailsapp/wails/v3/internal/s"
 	"os"
 	"path/filepath"
 	"sync"

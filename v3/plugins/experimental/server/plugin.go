@@ -4,7 +4,7 @@ import (
 	_ "embed"
 	"fmt"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
 )
 
 //go:embed plugin.js
@@ -59,5 +59,5 @@ func (s *Plugin) Shutdown() {
 
 // Name returns the name of the plugin.
 func (s *Plugin) Name() string {
-	return "github.com/wailsapp/wails/v3/plugins/server"
+	return "github.com/AlpineAIO/wails/v3/plugins/server"
 }

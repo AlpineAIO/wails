@@ -5,8 +5,8 @@ package application
 import (
 	"errors"
 	"fmt"
-	"github.com/wailsapp/wails/v3/internal/assetserver"
-	"github.com/wailsapp/wails/v3/internal/runtime"
+	"github.com/AlpineAIO/wails/v3/internal/assetserver"
+	"github.com/AlpineAIO/wails/v3/internal/runtime"
 	"net/url"
 	"strconv"
 	"strings"
@@ -16,16 +16,16 @@ import (
 	"unicode/utf16"
 	"unsafe"
 
+	"github.com/AlpineAIO/wails/v3/internal/assetserver/webview"
+	"github.com/AlpineAIO/wails/v3/internal/capabilities"
 	"github.com/bep/debounce"
 	"github.com/wailsapp/go-webview2/webviewloader"
-	"github.com/wailsapp/wails/v3/internal/assetserver/webview"
-	"github.com/wailsapp/wails/v3/internal/capabilities"
 
 	"github.com/samber/lo"
 
+	"github.com/AlpineAIO/wails/v3/pkg/events"
+	"github.com/AlpineAIO/wails/v3/pkg/w32"
 	"github.com/wailsapp/go-webview2/pkg/edge"
-	"github.com/wailsapp/wails/v3/pkg/events"
-	"github.com/wailsapp/wails/v3/pkg/w32"
 )
 
 var edgeMap = map[string]uintptr{
@@ -967,7 +967,7 @@ func (w *windowsWebviewWindow) WndProc(msg uint32, wparam, lparam uintptr) uintp
 			// If the window is frameless, and we are minimizing, then we need to suppress the Resize on the
 			// WebView2. If we don't do this, restoring does not work as expected and first restores with some wrong
 			// size during the restore animation and only fully renders when the animation is done. This highly
-			// depends on the content in the WebView, see https://github.com/wailsapp/wails/issues/1319
+			// depends on the content in the WebView, see https://github.com/AlpineAIO/wails/issues/1319
 		} else if w.resizeDebouncer != nil {
 			w.resizeDebouncer(func() {
 				InvokeSync(func() {

@@ -88,14 +88,14 @@ import (
 	"text/template"
 	"unsafe"
 
-	"github.com/wailsapp/wails/v2/pkg/assetserver"
-	"github.com/wailsapp/wails/v2/pkg/assetserver/webview"
+	"github.com/AlpineAIO/wails/v2/pkg/assetserver"
+	"github.com/AlpineAIO/wails/v2/pkg/assetserver/webview"
 
-	"github.com/wailsapp/wails/v2/internal/binding"
-	"github.com/wailsapp/wails/v2/internal/frontend"
-	wailsruntime "github.com/wailsapp/wails/v2/internal/frontend/runtime"
-	"github.com/wailsapp/wails/v2/internal/logger"
-	"github.com/wailsapp/wails/v2/pkg/options"
+	"github.com/AlpineAIO/wails/v2/internal/binding"
+	"github.com/AlpineAIO/wails/v2/internal/frontend"
+	wailsruntime "github.com/AlpineAIO/wails/v2/internal/frontend/runtime"
+	"github.com/AlpineAIO/wails/v2/internal/logger"
+	"github.com/AlpineAIO/wails/v2/pkg/options"
 )
 
 var initOnce = sync.Once{}

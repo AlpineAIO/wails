@@ -3,7 +3,7 @@ package parser
 import (
 	"errors"
 	"fmt"
-	"github.com/wailsapp/wails/v3/internal/flags"
+	"github.com/AlpineAIO/wails/v3/internal/flags"
 	"go/ast"
 	"go/build"
 	"go/parser"
@@ -16,8 +16,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/AlpineAIO/wails/v3/internal/hash"
 	"github.com/samber/lo"
-	"github.com/wailsapp/wails/v3/internal/hash"
 )
 
 type packagePath = string

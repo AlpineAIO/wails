@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/wailsapp/wails/v3/internal/flags"
+	"github.com/AlpineAIO/wails/v3/internal/flags"
 
 	"github.com/leaanthony/gosod"
 

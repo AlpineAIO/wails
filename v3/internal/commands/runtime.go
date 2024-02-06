@@ -1,7 +1,7 @@
 package commands
 
 import (
-	"github.com/wailsapp/wails/v3/internal/commands/build_assets/runtime"
+	"github.com/AlpineAIO/wails/v3/internal/commands/build_assets/runtime"
 	"os"
 )
 

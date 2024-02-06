@@ -6,8 +6,8 @@ import (
 	"log"
 	"strings"
 
-	"github.com/wailsapp/wails/v3/pkg/application"
-	"github.com/wailsapp/wails/v3/pkg/events"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/pkg/events"
 )
 
 type Window struct {

@@ -3,10 +3,10 @@ package main
 import (
 	"embed"
 	_ "embed"
+	"github.com/AlpineAIO/wails/v3/pkg/application"
+	"github.com/AlpineAIO/wails/v3/plugins/oauth"
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/providers/github"
-	"github.com/wailsapp/wails/v3/pkg/application"
-	"github.com/wailsapp/wails/v3/plugins/oauth"
 	"log"
 	"os"
 )
@@ -37,7 +37,7 @@ func main() {
 			FS: assets,
 		},
 		Plugins: map[string]application.Plugin{
-			"github.com/wailsapp/wails/v3/plugins/oauth": oAuthPlugin,
+			"github.com/AlpineAIO/wails/v3/plugins/oauth": oAuthPlugin,
 		},
 	})
 
