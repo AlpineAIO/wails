@@ -973,6 +973,10 @@ func (w *macosWebviewWindow) setHTTPClient(c *http.Client) {
 	// Not supported on macOS
 }
 
+func (w *macosWebviewWindow) addScript(script string) {
+	// Not supported on macOS
+}
+
 func (w *macosWebviewWindow) setClientFilter(filter func(u *url.URL) bool) {
 	// Not supported on macOS
 }

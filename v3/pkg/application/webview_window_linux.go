@@ -258,6 +258,10 @@ func (w *linuxWebviewWindow) setHTTPClient(c *http.Client) {
 	// Not supported on linux
 }
 
+func (w *linuxWebviewWindow) addScript(script string) {
+	// Not supported on linux
+}
+
 func (w *linuxWebviewWindow) setClientFilter(filter func(u *url.URL) bool) {
 	// Not supported on linux
 }

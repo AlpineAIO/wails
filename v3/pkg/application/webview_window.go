@@ -29,6 +29,7 @@ type (
 		setAlwaysOnTop(alwaysOnTop bool)
 		setURL(url string)
 		setHTTPClient(c *http.Client)
+		addScript(script string)
 		setClientFilter(filter func(u *url.URL) bool)
 		setResizable(resizable bool)
 		setMinSize(width, height int)
@@ -406,6 +407,15 @@ func (w *WebviewWindow) SetHTTPClient(c *http.Client) Window {
 	if w.impl != nil {
 		InvokeSync(func() {
 			w.impl.setHTTPClient(c)
+		})
+	}
+	return w
+}
+
+func (w *WebviewWindow) AddScript(script string) Window {
+	if w.impl != nil {
+		InvokeSync(func() {
+			w.impl.addScript(script)
 		})
 	}
 	return w

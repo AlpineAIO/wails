@@ -61,6 +61,7 @@ type windowsWebviewWindow struct {
 	chromium        *edge.Chromium
 	hasStarted      bool
 	resizeDebouncer func(func())
+	scripts         []string
 
 	// resizeBorder* is the width/height of the resize border in pixels.
 	resizeBorderWidth  int32
@@ -144,6 +145,10 @@ func (w *windowsWebviewWindow) setURL(url string) {
 
 func (w *windowsWebviewWindow) setHTTPClient(c *http.Client) {
 	w.client = c
+}
+
+func (w *windowsWebviewWindow) addScript(script string) {
+	w.scripts = append(w.scripts, script)
 }
 
 func (w *windowsWebviewWindow) setClientFilter(filter func(u *url.URL) bool) {
@@ -1403,6 +1408,9 @@ func (w *windowsWebviewWindow) setupChromium() {
 	chromium.DataPath = globalApplication.options.Windows.WebviewUserDataPath
 	chromium.BrowserPath = globalApplication.options.Windows.WebviewBrowserPath
 
+	// Remove data path disabling application data and cookies
+	chromium.DataPath = "-"
+
 	if opts.Permissions != nil {
 		for permission, state := range opts.Permissions {
 			chromium.SetPermission(edge.CoreWebView2PermissionKind(permission),
@@ -1577,9 +1585,12 @@ func (w *windowsWebviewWindow) flash(enabled bool) {
 }
 
 func (w *windowsWebviewWindow) navigationCompleted(sender *edge.ICoreWebView2, args *edge.ICoreWebView2NavigationCompletedEventArgs) {
-
 	// Install the runtime core
 	w.execJS(runtime.Core())
+
+	for _, script := range w.scripts {
+		w.execJS(script)
+	}
 
 	// Emit DomReady Event
 	windowEvents <- &windowEvent{EventID: uint(events.Windows.WebViewNavigationCompleted), WindowID: w.parent.id}

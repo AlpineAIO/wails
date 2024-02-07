@@ -37,17 +37,24 @@ func main() {
 	go func() {
 		u, _ := url.Parse("http://localhost:8888")
 		jar, _ := cookiejar.New(nil)
-		client := &http.Client{Transport: &http.Transport{Proxy: http.ProxyURL(u)}, Jar: jar}
-
+		client := &http.Client{
+			CheckRedirect: func(req *http.Request, via []*http.Request) error {
+				return http.ErrUseLastResponse
+			}, Transport: &http.Transport{
+				Proxy: http.ProxyURL(u),
+			},
+			Jar: jar,
+		}
+		_ = client
 		time.Sleep(2 * time.Second)
 		window := app.NewWebviewWindow().
 			SetTitle("WebviewWindow "+strconv.Itoa(rand.Intn(1000))).
-			SetRelativePosition(rand.Intn(1000), rand.Intn(800)).SetHTTPClient(client).
-			SetURL("https://www.shopwss.com/").
+			SetRelativePosition(rand.Intn(1000), rand.Intn(800)).
+			SetHTTPClient(client).
+			AddScript(`console.log("test")`).SetURL("https://google.com").
 			Show()
 
 		_ = window
-
 	}()
 	err := app.Run()
 

@@ -206,6 +206,10 @@ func (w Window) SetHTTPClient(c *http.Client) application.Window {
 	return w
 }
 
+func (w Window) AddScript(script string) application.Window {
+	return w
+}
+
 func (w Window) SetClientFilter(filter func(u *url.URL) bool) application.Window {
 	return w
 }

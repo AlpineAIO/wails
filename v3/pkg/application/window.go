@@ -66,6 +66,7 @@ type Window interface {
 	SetTitle(title string) Window
 	SetURL(s string) Window
 	SetHTTPClient(c *http.Client) Window
+	AddScript(script string) Window
 	SetClientFilter(filter func(u *url.URL) bool) Window
 	SetZoom(magnification float64) Window
 	Show() Window
