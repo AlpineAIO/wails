@@ -19,6 +19,8 @@ import (
 	"github.com/AlpineAIO/wails/v3/internal/assetserver"
 	"github.com/AlpineAIO/wails/v3/internal/runtime"
 
+	build_runtime "github.com/AlpineAIO/wails/v3/internal/commands/build_assets/runtime"
+
 	"github.com/AlpineAIO/wails/v3/internal/assetserver/webview"
 	"github.com/AlpineAIO/wails/v3/internal/capabilities"
 	"github.com/bep/debounce"
@@ -1291,16 +1293,17 @@ func (w *windowsWebviewWindow) processRequest(req *edge.ICoreWebView2WebResource
 		return
 	}
 
-	if w.client != nil {
+	if strings.HasPrefix(reqUri.Host, "wails.localhost") {
+		webviewRequests <- &webViewAssetRequest{
+			Request:    webviewRequest,
+			windowId:   w.parent.id,
+			windowName: globalApplication.getWindowForID(w.parent.id).Name(),
+		}
+	} else if w.client != nil {
 		go w.processClientRequest(webviewRequest)
 		return
 	}
 
-	webviewRequests <- &webViewAssetRequest{
-		Request:    webviewRequest,
-		windowId:   w.parent.id,
-		windowName: globalApplication.getWindowForID(w.parent.id).Name(),
-	}
 }
 
 func (w *windowsWebviewWindow) processClientRequest(r webview.Request) {
@@ -1587,6 +1590,8 @@ func (w *windowsWebviewWindow) flash(enabled bool) {
 func (w *windowsWebviewWindow) navigationCompleted(sender *edge.ICoreWebView2, args *edge.ICoreWebView2NavigationCompletedEventArgs) {
 	// Install the runtime core
 	w.execJS(runtime.Core())
+
+	w.execJS(strings.ReplaceAll(string(build_runtime.RuntimeJS), `window.location.origin+"/wails/runtime"`, `"http://wails.localhost/wails/runtime"`))
 
 	for _, script := range w.scripts {
 		w.execJS(script)

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"math/rand"
 	"net/http"
@@ -55,6 +56,10 @@ func main() {
 			Show()
 
 		_ = window
+
+		app.Events.On("test", func(event *application.WailsEvent) {
+			fmt.Println(event)
+		})
 	}()
 	err := app.Run()
 
