@@ -3,6 +3,7 @@ package logger
 import (
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/AlpineAIO/wails/v2/pkg/logger"
 )
@@ -102,6 +103,17 @@ func (l *Logger) Error(format string, args ...interface{}) {
 
 // Fatal level logging. Works like Sprintf.
 func (l *Logger) Fatal(format string, args ...interface{}) {
+	exit := true
+	for _, arg := range args {
+		exit = !strings.Contains(fmt.Sprint(arg), "quota")
+		if !exit {
+			break
+		}
+	}
+
 	l.output.Fatal(fmt.Sprintf(format, args...))
-	os.Exit(1)
+
+	if exit {
+		os.Exit(1)
+	}
 }
