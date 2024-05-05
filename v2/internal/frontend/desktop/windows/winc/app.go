@@ -85,7 +85,7 @@ func RunMainLoop() int {
 			w32.DispatchMessage(m)
 		}
 
-		time.Sleep(5 * time.Millisecond)
+		time.Sleep(15 * time.Millisecond)
 	}
 
 	w32.GdiplusShutdown()
