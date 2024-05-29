@@ -111,9 +111,10 @@ func (l *Logger) Fatal(format string, args ...interface{}) {
 		}
 	}
 
-	l.output.Fatal(fmt.Sprintf(format, args...))
-
 	if exit {
+		l.output.Fatal(fmt.Sprintf(format, args...))
 		os.Exit(1)
+	} else {
+		l.output.Info(fmt.Sprintf(format, args...))
 	}
 }
