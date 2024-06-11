@@ -5,6 +5,7 @@ go 1.21
 toolchain go1.21.0
 
 require (
+	github.com/AlpineAIO/go-webview2 v0.0.0-20240611201839-30c79dd2d0a0
 	github.com/Masterminds/semver v1.5.0
 	github.com/acarl005/stripansi v0.0.0-20180116102854-5a71ef0e047d
 	github.com/bep/debounce v1.2.1
@@ -38,7 +39,6 @@ require (
 	github.com/tc-hib/winres v0.2.1
 	github.com/tidwall/sjson v1.1.7
 	github.com/tkrajina/go-reflector v0.5.6
-	github.com/wailsapp/go-webview2 v1.0.10
 	github.com/wailsapp/mimetype v1.4.1
 	github.com/wzshiming/ctc v1.2.3
 	golang.org/x/mod v0.12.0

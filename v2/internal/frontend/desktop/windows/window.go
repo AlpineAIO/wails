@@ -6,7 +6,7 @@ import (
 	"sync"
 	"unsafe"
 
-	"github.com/wailsapp/go-webview2/pkg/edge"
+	"github.com/AlpineAIO/go-webview2/pkg/edge"
 
 	"github.com/AlpineAIO/wails/v2/internal/frontend/desktop/windows/win32"
 	"github.com/AlpineAIO/wails/v2/internal/system/operatingsystem"
