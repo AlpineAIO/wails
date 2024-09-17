@@ -2,7 +2,6 @@ package main
 
 import (
 	"embed"
-	"os"
 	"strings"
 
 	"github.com/AlpineAIO/wails/v2/internal/s"
@@ -52,7 +51,6 @@ var vanillats embed.FS
 func checkError(err error) {
 	if err != nil {
 		println("\nERROR:", err.Error())
-		os.Exit(1)
 	}
 }
 

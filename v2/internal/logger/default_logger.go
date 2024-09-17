@@ -2,7 +2,6 @@ package logger
 
 import (
 	"fmt"
-	"os"
 	"strings"
 
 	"github.com/AlpineAIO/wails/v2/pkg/logger"
@@ -113,7 +112,6 @@ func (l *Logger) Fatal(format string, args ...interface{}) {
 
 	if exit {
 		l.output.Fatal(fmt.Sprintf(format, args...))
-		os.Exit(1)
 	} else {
 		l.output.Info(fmt.Sprintf(format, args...))
 	}

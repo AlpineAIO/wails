@@ -10,7 +10,6 @@ import (
 	"log"
 	"net"
 	"net/url"
-	"os"
 	"runtime"
 	"strings"
 	"sync"
@@ -496,7 +495,6 @@ func (f *Frontend) setupChromium() {
 				messages = f.frontendOptions.Windows.Messages
 			}
 			winc.Errorf(f.mainWindow, messages.WebView2ProcessCrash)
-			os.Exit(-1)
 		case edge.COREWEBVIEW2_PROCESS_FAILED_KIND_RENDER_PROCESS_EXITED,
 			edge.COREWEBVIEW2_PROCESS_FAILED_KIND_FRAME_RENDER_PROCESS_EXITED:
 			// => A new render process is created automatically and navigated to an error page.

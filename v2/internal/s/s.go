@@ -23,7 +23,6 @@ var (
 func checkError(err error) {
 	if err != nil {
 		println("\nERROR:", err.Error())
-		os.Exit(1)
 	}
 }
 
