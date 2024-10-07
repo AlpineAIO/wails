@@ -7,6 +7,7 @@ import (
 	"runtime"
 	"strings"
 
+	"github.com/AlpineAIO/wails/v2/internal/system"
 	"github.com/AlpineAIO/wails/v2/pkg/commands/build"
 	"github.com/AlpineAIO/wails/v2/pkg/commands/buildtags"
 	"github.com/leaanthony/slicer"
