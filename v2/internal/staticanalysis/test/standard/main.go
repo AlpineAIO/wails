@@ -8,8 +8,11 @@ import (
 	"github.com/AlpineAIO/wails/v2/pkg/options/assetserver"
 )
 
-//go:embed all:frontend/dist
+//go:embed all:frontend/dist frontend/static
 var assets embed.FS
+
+//go:embed frontend/src/*.json
+var srcjson embed.FS
 
 func main() {
 	// Create an instance of the app structure
