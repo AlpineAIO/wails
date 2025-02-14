@@ -5,7 +5,7 @@ go 1.21
 toolchain go1.21.0
 
 require (
-	github.com/AlpineAIO/go-webview2 v0.0.0-20241007171308-6a05b9458af9
+	github.com/AlpineAIO/go-webview2 v0.0.0-20250214165734-b0830dfce4a5
 	github.com/Masterminds/semver v1.5.0
 	github.com/acarl005/stripansi v0.0.0-20180116102854-5a71ef0e047d
 	github.com/bep/debounce v1.2.1
@@ -35,7 +35,7 @@ require (
 	github.com/pterm/pterm v0.12.49
 	github.com/sabhiram/go-gitignore v0.0.0-20210923224102-525f6e181f06
 	github.com/samber/lo v1.38.1
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.9.0
 	github.com/tc-hib/winres v0.2.1
 	github.com/tidwall/sjson v1.1.7
 	github.com/tkrajina/go-reflector v0.5.6
@@ -43,7 +43,7 @@ require (
 	github.com/wzshiming/ctc v1.2.3
 	golang.org/x/mod v0.14.0
 	golang.org/x/net v0.25.0
-	golang.org/x/sys v0.20.0
+	golang.org/x/sys v0.27.0
 	golang.org/x/tools v0.17.0
 )
 
