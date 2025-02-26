@@ -17,7 +17,6 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/AlpineAIO/go-webview2/pkg/edge"
 	"github.com/AlpineAIO/wails/v2/internal/binding"
 	"github.com/AlpineAIO/wails/v2/internal/frontend"
 	"github.com/AlpineAIO/wails/v2/internal/frontend/desktop/windows/win32"
@@ -31,6 +30,7 @@ import (
 	"github.com/AlpineAIO/wails/v2/pkg/options"
 	"github.com/AlpineAIO/wails/v2/pkg/options/windows"
 	"github.com/bep/debounce"
+	"github.com/wailsapp/go-webview2/pkg/edge"
 )
 
 const startURL = "http://wails.localhost/"
