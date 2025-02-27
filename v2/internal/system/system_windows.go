@@ -6,7 +6,7 @@ package system
 import (
 	"github.com/AlpineAIO/wails/v2/internal/system/operatingsystem"
 	"github.com/AlpineAIO/wails/v2/internal/system/packagemanager"
-	"github.com/wailsapp/go-webview2/webviewloader"
+	"github.com/Humphryyy/go-webview2/webviewloader"
 )
 
 func (i *Info) discover() error {

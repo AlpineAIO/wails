@@ -29,8 +29,8 @@ import (
 	"github.com/AlpineAIO/wails/v2/pkg/assetserver/webview"
 	"github.com/AlpineAIO/wails/v2/pkg/options"
 	"github.com/AlpineAIO/wails/v2/pkg/options/windows"
+	"github.com/Humphryyy/go-webview2/pkg/edge"
 	"github.com/bep/debounce"
-	"github.com/wailsapp/go-webview2/pkg/edge"
 )
 
 const startURL = "http://wails.localhost/"
