@@ -5,7 +5,7 @@ go 1.21
 toolchain go1.21.0
 
 require (
-	github.com/Humphryyy/go-webview2 v1.0.14-0.20250227034341-fc2eda20aaac
+	github.com/Humphryyy/go-webview2 v1.0.14-0.20250411215338-953f98c80411
 	github.com/Masterminds/semver v1.5.0
 	github.com/acarl005/stripansi v0.0.0-20180116102854-5a71ef0e047d
 	github.com/bep/debounce v1.2.1
