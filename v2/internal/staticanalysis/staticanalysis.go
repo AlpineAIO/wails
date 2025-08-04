@@ -27,7 +27,7 @@ func GetEmbedDetails(sourcePath string) ([]*EmbedDetails, error) {
 		return nil, err
 	}
 	pkgs, err := packages.Load(&packages.Config{
-		Mode: packages.NeedName | packages.NeedSyntax | packages.NeedTypes | packages.NeedTypesInfo | packages.NeedCompiledGoFiles,
+		Mode: packages.NeedName | packages.NeedSyntax | packages.NeedCompiledGoFiles,
 		Dir:  absPath,
 	}, "./...")
 	if err != nil {
