@@ -1,8 +1,6 @@
 module github.com/AlpineAIO/wails/v2
 
-go 1.21
-
-toolchain go1.21.0
+go 1.24.0
 
 require (
 	github.com/Humphryyy/go-webview2 v1.0.14-0.20250411215338-953f98c80411
