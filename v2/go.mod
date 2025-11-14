@@ -3,7 +3,7 @@ module github.com/AlpineAIO/wails/v2
 go 1.24.0
 
 require (
-	github.com/Humphryyy/go-webview2 v1.0.14-0.20251020191430-65de361e6a57
+	github.com/Humphryyy/go-webview2 v1.0.14-0.20251114214249-f89c0027485e
 	github.com/Masterminds/semver v1.5.0
 	github.com/acarl005/stripansi v0.0.0-20180116102854-5a71ef0e047d
 	github.com/bep/debounce v1.2.1
